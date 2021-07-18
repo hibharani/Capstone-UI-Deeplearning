@@ -1,4 +1,4 @@
 sklearn
 nltk
 keras
-tensorflow
+tensorflow==2.1.0
