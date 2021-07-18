@@ -1,3 +1,4 @@
 sklearn
 nltk
 keras
+tensorflow
