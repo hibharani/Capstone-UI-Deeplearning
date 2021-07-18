@@ -4,15 +4,19 @@ import pandas as pd
 import streamlit as st 
 from collections import OrderedDict
 from joblib import load
+from keras.preprocessing.text import Tokenizer
+from keras.preprocessing.sequence import pad_sequences
+import pickle
+from keras.preprocessing.text import Tokenizer
+import nltk
+import re
+from nltk.corpus import stopwords 
+from pickle import dump, load
+import tensorflow as tf
 
 
 def data_preprocessing(input_json):
     
-    from keras.preprocessing.text import Tokenizer
-    from keras.preprocessing.sequence import pad_sequences
-    import pickle
-    from keras.preprocessing.text import Tokenizer
-    import nltk
     Pkl_Filename = "tokenizer.pkl"
     with open(Pkl_Filename, 'rb') as file:
         Pickled_tokenizer_Model = pickle.load(file)
@@ -162,9 +166,6 @@ def data_preprocessing(input_json):
                     text = " ".join(text)
         return text    
     
-    import re
-    from nltk.corpus import stopwords 
-    from pickle import dump, load
     cleaned_text = clean_text(combined_text)
     # The maximum number of words to be used. (most frequent)
     MAX_NB_WORDS = 50000
@@ -198,7 +199,6 @@ def processinput():
     "day" : ""}
 
     test_tt = data_preprocessing(jon)
-    import tensorflow as tf
     new_model = tf.keras.models.load_model('capstone_dl_model')
     pred = new_model.predict(test_tt)
     labels = [1,2,3,4,5]
