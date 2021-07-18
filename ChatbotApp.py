@@ -1,18 +1,20 @@
 import numpy as np
-import pickle
 import pandas as pd
 import streamlit as st 
 from collections import OrderedDict
 from joblib import load
-from keras.preprocessing.text import Tokenizer
-from keras.preprocessing.sequence import pad_sequences
-import pickle
-from keras.preprocessing.text import Tokenizer
-import nltk
-import re
-from nltk.corpus import stopwords 
-from pickle import dump, load
+
 import tensorflow as tf
+from tf.keras.preprocessing.text import Tokenizer
+from tf.keras.preprocessing.sequence import pad_sequences
+from tf.keras.preprocessing.text import Tokenizer
+
+import pickle
+from pickle import dump, load
+
+import re
+import nltk
+from nltk.corpus import stopwords 
 
 
 def data_preprocessing(input_json):
