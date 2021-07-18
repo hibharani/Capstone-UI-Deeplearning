@@ -5,9 +5,9 @@ from collections import OrderedDict
 from joblib import load
 
 import tensorflow as tf
-from tf.keras.preprocessing.text import Tokenizer
-from tf.keras.preprocessing.sequence import pad_sequences
-from tf.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.text import Tokenizer
 
 import pickle
 from pickle import dump, load
