@@ -1,5 +1,4 @@
 sklearn
 nltk
 keras
-tensorflow==2.2.0
-numpy==1.19.5
+tensorflow
